@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: 'Yesava One', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #303030;
+  color: white;
+}
+/* @font-face {
+  font-family: 'Yesava';
+  src: url('YesevaOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+
+code {
+  font-family: 'Yesava One',
+    monospace;
+}
+.animation-container {
+  animation: slide-in 1s forwards;
+  opacity: 0;
+}
+
+.animation-slide-in-left {
+  animation: slide-in-left 1s ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+.animation-image-container {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slide-in-right 1s forwards;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+
+.animation-text-container {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slide-in-left 1s forwards;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
